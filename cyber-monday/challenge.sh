@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Thanks to https://stackoverflow.com/a/52678961 for help with this solution.
-for pod in `kubectl get pods -o=name -l app=nginx-deployment | sed "s/^.\{4\}//"`
+for pod in `kubectl get pods -o=name -l app=just-a-pod | sed "s/^.\{4\}//"`
 do
     echo "Pod: $pod"
     echo -n "  Copying log.sh to $pod... "
